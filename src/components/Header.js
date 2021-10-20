@@ -1,23 +1,26 @@
 import React from 'react';
 
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
-// Navbar and "Brand"
+// Basic header with name and links
 function Header() {
     return (
-        <Navbar bg="light" expand="lg">
-            <Container>
-                <Navbar.Brand href="#home">Elbin Cenisev</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbar" />
-                <Navbar.Collapse id="navbar">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Introduction</Nav.Link>
-                        <Nav.Link href="#projects">Projects</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <header className="mb-5">
+            <div>
+                <h3 className="">Elbin Cenisev</h3>
+                <Nav className="justify-content-center nav-masthead">
+                    <Nav.Item>
+                        <Nav.Link className="active">About</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link>Projects</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link>Contact</Nav.Link>
+                    </Nav.Item>
+                </Nav>
+            </div>
+        </header >
     );
 }
 
