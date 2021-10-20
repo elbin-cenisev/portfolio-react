@@ -4,6 +4,7 @@ import Header from './Header'; // Contains navbar
 import Cover from './Cover'; // Contains first screen on load
 import About from './About'; // Contains About Me page
 import Projects from './Projects'; // Contains the top three projects I want to show off
+import Contact from './Contact'; // Contains the top three projects I want to show off
 
 function Portfolio() {
     return (
@@ -19,6 +20,9 @@ function Portfolio() {
                     </Route>
                     <Route path="/projects">
                         <Projects />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
                     </Route>
                 </Switch>
 
