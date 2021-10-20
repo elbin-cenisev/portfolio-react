@@ -1,3 +1,9 @@
+/* Body bg-color is actually overridden by React and needs to be applied 
+via componentDidMount() in App.js. Leaving this here just in case */
+body {
+    background-color: #24305E;
+}
+
 .nav-masthead .nav-link{
     color: rgba(255, 255, 255, .5);
     font-weight: 700;

@@ -5,6 +5,8 @@ import Cover from './components/Cover'; // Contains first screen on load
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+componentDidMount();
+
 function App() {
   return (
     <div className="my-portfolio">
@@ -12,6 +14,10 @@ function App() {
       <Cover />
     </div>
   );
+}
+
+function componentDidMount() {
+  document.body.style.backgroundColor = "#24305E"// Set the style
 }
 
 export default App;
