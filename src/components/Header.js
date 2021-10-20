@@ -10,13 +10,13 @@ function Header() {
                 <h3 className="">Elbin Cenisev</h3>
                 <Nav className="justify-content-center nav-masthead">
                     <Nav.Item>
-                        <Nav.Link className="active">About</Nav.Link>
+                        <Nav.Link href="/about">About</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>Projects</Nav.Link>
+                        <Nav.Link href="/projects">Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>Contact</Nav.Link>
+                        <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </div>
