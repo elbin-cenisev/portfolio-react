@@ -63,6 +63,7 @@ function Projects() {
                 </Card>
             </CardGroup>
 
+            <Button className="mb-5" variant="light" href="https://github.com/elbin-cenisev"><Image width="40px" height="40px" src={githubLogo} /> See More</Button>
         </Container>
     );
 }
