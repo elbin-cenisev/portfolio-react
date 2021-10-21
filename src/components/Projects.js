@@ -1,17 +1,19 @@
 import React from 'react';
 
-import { Button, Card, CardGroup, Container } from 'react-bootstrap';
-import techBlog from '../images/techBlog.png'
-import socialGameLibrary from '../images/socialGameLibrary.png'
-import workoutTracker from '../images/workoutTracker.png'
+import { Image, Button, Card, CardGroup, Container } from 'react-bootstrap';
+import techBlog from '../images/techBlog.png';
+import socialGameLibrary from '../images/socialGameLibrary.png';
+import workoutTracker from '../images/workoutTracker.png';
+import githubLogo from '../images/githubLogo.png';
 
 // Navbar and "Brand"
 function Projects() {
     return (
         <Container className="projects">
             <h1>Projects</h1>
-            <CardGroup className="h-100 my-5">
-                <Card border="dark" className="mx-sm-3 my-sm-3 bg-light" style={{minWidth: '15rem'}}>
+            <p className="lead">Here is a selection of some of the projects I have worked on during the fullstack coding bootcamp. You can check out all of my work on GitHub.</p>
+            <CardGroup className="h-100 my-3">
+                <Card border="dark" className="mx-sm-3 my-sm-3 bg-light" style={{minWidth: '18rem'}}>
                     <Card.Img className="cardImg" variant="top" src={workoutTracker} />
                     <Card.Body className="cardText">
                         <Card.Title className="mt-3">Workout Tracker</Card.Title>
@@ -26,7 +28,7 @@ function Projects() {
                     </Card.Footer>
                 </Card>
 
-                <Card border="dark" className="mx-sm-3 my-sm-3 bg-light" style={{minWidth: '15rem'}}>
+                <Card border="dark" className="mx-sm-3 my-sm-3 bg-light" style={{minWidth: '18rem'}}>
                     <Card.Img className="cardImg" variant="top" src={techBlog} />
                     <Card.Body className="cardText">
                         <Card.Title className="mt-3" >Tech Blog</Card.Title>
@@ -42,7 +44,7 @@ function Projects() {
                     </Card.Footer>
                 </Card>
 
-                <Card border="dark" className="mx-sm-3 my-sm-3 bg-light" style={{minWidth: '15rem'}}>
+                <Card border="dark" className="mx-sm-3 my-sm-3 bg-light" style={{minWidth: '18rem'}}>
                     <Card.Img className="cardImg" variant="top" src={socialGameLibrary} />
                     <Card.Body className="cardText">
                         <Card.Title className="mt-3" >Social Game Library</Card.Title>
@@ -60,6 +62,7 @@ function Projects() {
                     </Card.Footer>
                 </Card>
             </CardGroup>
+
         </Container>
     );
 }
