@@ -1,7 +1,14 @@
-/* Body bg-color is actually overridden by React and needs to be applied 
+
+html {
+    height: 100%;
+}
+
+/* Body components are actually overridden by React and needs to be applied 
 via componentDidMount() in App.js. Leaving this here just in case */
 body {
     background-color: #24305E;
+    height: 100%;
+    line-height:200%;
 }
 
 .titleLink {

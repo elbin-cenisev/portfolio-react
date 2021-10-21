@@ -12,8 +12,10 @@ function App() {
   );
 }
 
+// Can't set custom Body styles in CSS, so must be done here
 function componentDidMount() {
-  document.body.style.backgroundColor = "#24305E"// Set the style
+  document.body.style.backgroundColor = "#24305E"
+  document.body.style.lineHeight = "2";
 }
 
 export default App;
