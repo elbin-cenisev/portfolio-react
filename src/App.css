@@ -11,6 +11,16 @@ body {
     line-height:200%;
 }
 
+/* CREDIT TO: http://martinpennock.com/blog/force-footer-bottom-page-css/ */
+.content {
+    min-height: calc(100vh - 200px);
+}
+
+/* CREDIT TO: http://martinpennock.com/blog/force-footer-bottom-page-css/ */
+.footer {
+    height: 200px;
+}
+
 .titleLink {
     text-decoration: none;
     color: #fff;
@@ -29,6 +39,10 @@ body {
     color: #fff;
     font-weight: 700;
     pointer-events: none;
+}
+
+.aboutText {
+    line-height: 3;
 }
 
 .divider {
@@ -53,6 +67,6 @@ body {
 }
 
 .cardImg {
-    max-height:500px;
+    max-height:300px;
     object-fit:contain;
 }
