@@ -1,12 +1,12 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 // Basic header with name and links
 function Header() {
     return (
         <header className="mb-5">
-            <div>
+            <Container className="py-3">
                 <Link to="/" className="titleLink"><h3>Elbin Cenisev</h3></Link> 
                 <Nav className="justify-content-center nav-masthead">
                     <Nav.Item>
@@ -19,7 +19,8 @@ function Header() {
                         <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav.Item>
                 </Nav>
-            </div>
+            </Container>
+            <Container fluid className="divider"></Container>
         </header >
     );
 }
