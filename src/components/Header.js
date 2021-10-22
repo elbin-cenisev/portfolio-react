@@ -18,9 +18,11 @@ function Header() {
                     <Nav.Item>
                         <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="https://drive.google.com/file/d/109Ue6l9rYXh5k6x3ZRZCfEfXP0yp2euC/view?usp=sharing">Resume</Nav.Link>
+                    </Nav.Item>
                 </Nav>
             </Container>
-            <Container fluid className="divider"></Container>
         </header >
     );
 }

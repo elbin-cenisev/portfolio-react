@@ -5,11 +5,12 @@ import Cover from './Cover'; // Contains first screen on load
 import About from './About'; // Contains About Me page
 import Projects from './Projects'; // Contains the top three projects I want to show off
 import Contact from './Contact'; // Contains the top three projects I want to show off
+import Footer from './Footer'; // Contains Footer with links
 
 function Portfolio() {
     return (
         <Router>
-            <div className="my-portfolio">
+            <div class="content p-3">
                 <Header />
                 <Switch>
                     <Route exact path="/">
@@ -25,8 +26,10 @@ function Portfolio() {
                         <Contact />
                     </Route>
                 </Switch>
-
-            </div>
+                </div>
+                <div className="footer">
+                    <Footer />
+                </div>
         </Router>
     );
 }

@@ -6,8 +6,9 @@ import { Container } from 'react-bootstrap';
 function About() {
     return (
         <Container className="aboutMe">
-            <h1>About Me</h1>
-            <p className="lead">My name is Elbin Cenisev. I was born and raised in Germany but 
+            <h1 className="mt-5">About Me </h1>
+            <p className="lead aboutText">
+            I was born and raised in Germany but 
             eventually moved to the United States when I was 16. 
             
             I earned a bachelor's degree
