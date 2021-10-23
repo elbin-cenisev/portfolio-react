@@ -69,12 +69,12 @@ function Contact() {
     };
 
     return (
-        <Container className="contact">
+        <Container className="contact content">
             <h1 className="mt-3">Contact Me</h1>
             <p className="lead">You will be able to use this form to send me a message at some point</p>
 
             <Row className="justify-content-center">
-                <Form className="text-center" style={{ width: '50%' }}>
+                <Form className="text-center" style={{ width: '80%' }}>
 
                     <Form.Group className="mb-3" controlId="formName">
                         <Form.Label>Name</Form.Label>
@@ -104,11 +104,13 @@ function Contact() {
                     <Form.Group className="mb-3" controlId="formMessage">
                         <Form.Label>Message</Form.Label>
                         <Form.Control
+                            as="textarea"
                             value={message}
                             name="message"
                             type="message"
                             placeholder="Enter your message"
                             onChange={setInput}
+                            style={{height: '8rem'}}
                         />
                     </Form.Group>
 

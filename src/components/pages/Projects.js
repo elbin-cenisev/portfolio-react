@@ -1,18 +1,18 @@
 import React from 'react';
 
 import { Image, Button, Card, Row, Col, Container } from 'react-bootstrap';
-import techBlog from '../images/techBlog.png';
-import socialGameLibrary from '../images/socialGameLibrary.png';
-import workoutTracker from '../images/workoutTracker.png';
-import employeeTracker from '../images/employeeTracker.PNG';
-import musicMatcher from '../images/musicMatcher.png';
-import computerGameQuiz from '../images/computerGameQuiz.PNG';
-import githubLogo from '../images/githubLogo.png';
+import techBlog from '../../images/techBlog.png';
+import socialGameLibrary from '../../images/socialGameLibrary.png';
+import workoutTracker from '../../images/workoutTracker.png';
+import employeeTracker from '../../images/employeeTracker.PNG';
+import musicMatcher from '../../images/musicMatcher.png';
+import computerGameQuiz from '../../images/computerGameQuiz.PNG';
+import githubLogo from '../../images/githubLogo.png';
 
 // Navbar and "Brand"
 function Projects() {
     return (
-        <Container className="projects">
+        <Container className="projects content">
             <h1>Projects</h1>
             <p className="lead">Here is a selection of some of the projects I have worked on during the fullstack coding bootcamp. You can check out all of my work on GitHub.</p>
             <Row className="h-100 my-3 g-3 row-cols-lg-3 row-cols-md-2 row-cols-1">
