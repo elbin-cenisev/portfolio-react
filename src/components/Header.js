@@ -5,8 +5,13 @@ import { Nav, Container } from 'react-bootstrap';
 function Header({ currentPage, handlePageChange }) {
     return (
         <header className="my-5">
-            <Container className="py-3">
-                <a href="/" className="titleLink"><h3>Elbin Cenisev</h3></a>
+            <Container>
+                <a
+                    href="#cover"
+                    onClick={() => handlePageChange('Cover')}
+                    className={currentPage === 'Cover' ? 'nav-link active titleLink' : 'nav-Link titleLink'}
+                >
+                    <h3 className="titleLink">Elbin Cenisev</h3></a>
                 <Nav className="justify-content-center nav-masthead">
                     <Nav.Item>
                         <Nav.Link

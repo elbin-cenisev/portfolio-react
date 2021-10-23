@@ -10,6 +10,9 @@ function Portfolio() {
     const [currentPage, setCurrentPage] = useState('Home');
 
     const renderPage = () => {
+        if (currentPage === 'Cover') {
+            return <Cover />;
+        }
         if (currentPage === 'About') {
             return <About />;
         }
