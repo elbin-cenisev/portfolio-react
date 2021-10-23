@@ -6,6 +6,8 @@ var validator = require('validator');
 // Contact form
 function Contact() {
     // State variables for each field in the form
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [show, setShow] = useState(false);
@@ -13,20 +15,21 @@ function Contact() {
     // Relevant elements
     var error = document.getElementById("errorField");
     var emailField = document.getElementById("formEmail")
-    
 
+    // Validates the email
     function checkEmail(e) {
         if (!(validator.isEmail(email))) {
             // There is only one error message, so I set it
             setErrorMessage("A valid email address is required");
             setShow(true);
-        } else { 
+        } else {
             setShow(false);
             error.textContent = "";
             emailField.style.border = "none"
         }
     }
 
+    // This if statement just handles error message display for email field
     if (show) {
         error.textContent = errorMessage
         error.style.color = "red"
@@ -41,20 +44,47 @@ function Contact() {
         // Based on the input type, we set the state of either email, username, and password
         if (inputType === 'email') {
             setEmail(inputValue);
+        } else if (inputType === 'name') {
+            setName(inputValue);
+        } else if (inputType === 'message') {
+            setMessage(inputValue);
         }
     }
+
+    // All this does for now is just make the fields empty
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        // Make sure all the fields are valid
+        if (!(validator.isEmail(email))) {
+            alert("Invalid email address")
+        } 
+        
+        // If all is well, ... Clear the fields (because I don't know how to submit a message directly)
+        else {
+            setName('');
+            setMessage('');
+            setEmail('');
+        }
+    };
 
     return (
         <Container className="contact">
             <h1 className="mt-3">Contact Me</h1>
-            <p className="lead">You can use this form to send me a message</p>
+            <p className="lead">You will be able to use this form to send me a message at some point</p>
 
             <Row className="justify-content-center">
                 <Form className="text-center" style={{ width: '50%' }}>
 
                     <Form.Group className="mb-3" controlId="formName">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter your name" />
+                        <Form.Control
+                            value={name}
+                            name="name"
+                            type="name"
+                            onChange={setInput}
+                            placeholder="Enter your name" />
+
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formEmail">
@@ -73,11 +103,16 @@ function Contact() {
 
                     <Form.Group className="mb-3" controlId="formMessage">
                         <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" type="text"
-                            style={{ height: '100px' }} placeholder="Enter your message" />
+                        <Form.Control
+                            value={message}
+                            name="message"
+                            type="message"
+                            placeholder="Enter your message"
+                            onChange={setInput}
+                        />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" onClick={handleFormSubmit}>
                         Submit
                     </Button>
                 </Form>
