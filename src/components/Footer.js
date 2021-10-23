@@ -10,8 +10,7 @@ import stackOverflowLogo from '../images/stackOverflowLogo.png'
 function Footer() {
     return (
         <Container fluid className="p-3">
-            <Container fluid className="divider mb-3"></Container>
-            <h5>Links</h5>
+            <Container fluid className="divider mb-5"></Container>
             <Row className="g-3 row-cols-md-3 row-cols-1 justify-content-center">
                 <Col md="auto">
                     <Link href="https://stackoverflow.com/users/14283359/nible" className="px-3">
