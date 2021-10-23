@@ -13,13 +13,12 @@ function Footer() {
             <Container fluid className="divider mb-5"></Container>
             <Row className="g-3 row-cols-md-3 row-cols-1 justify-content-center">
                 <Col md="auto">
-                    <Link href="https://stackoverflow.com/users/14283359/nible" className="px-3">
+                    <Link href="https://www.linkedin.com/in/elbin-cenisev-7a31568a/" className="px-3">
                         <Image height="40px" src={linkedInLogo} />
-
                     </Link>
                 </Col>
                 <Col md="auto">
-                    <Link href="https://stackoverflow.com/users/14283359/nible" className="px-3">
+                    <Link href="https://github.com/elbin-cenisev" className="px-3">
                         <Image height="40px" src={githubLogo} />
                     </Link>
                 </Col>
