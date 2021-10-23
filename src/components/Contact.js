@@ -7,11 +7,30 @@ var validator = require('validator');
 function Contact() {
     // State variables for each field in the form
     const [email, setEmail] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [show, setShow] = useState(false);
+
+    // Relevant elements
+    var error = document.getElementById("errorField");
+    var emailField = document.getElementById("formEmail")
+    
 
     function checkEmail(e) {
         if (!(validator.isEmail(email))) {
-            alert("It is not an email");
+            // There is only one error message, so I set it
+            setErrorMessage("A valid email address is required");
+            setShow(true);
+        } else { 
+            setShow(false);
+            error.textContent = "";
+            emailField.style.border = "none"
         }
+    }
+
+    if (show) {
+        error.textContent = errorMessage
+        error.style.color = "red"
+        emailField.style.border = "thick solid red"
     }
 
     function setInput(e) {
@@ -49,6 +68,8 @@ function Contact() {
                             onChange={setInput}
                         />
                     </Form.Group>
+
+                    <span id="errorField"></span>
 
                     <Form.Group className="mb-3" controlId="formMessage">
                         <Form.Label>Message</Form.Label>
