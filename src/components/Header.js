@@ -45,7 +45,7 @@ function Header({ currentPage, handlePageChange }) {
 
                     <Nav.Item>
                         <Nav.Link
-                            href="https://drive.google.com/file/d/109Ue6l9rYXh5k6x3ZRZCfEfXP0yp2euC/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1tQdGnupMQkLPVz4vnj_pn_28H7iZus_2/view?usp=sharing"
                         >
                             Resume
                         </Nav.Link>
