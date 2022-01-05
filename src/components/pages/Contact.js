@@ -1,81 +1,83 @@
-import React, { useState } from 'react';
-import { Container, Row, Form, Button } from 'react-bootstrap';
-
-var validator = require('validator');
+import React from 'react';
+import { Container } from 'react-bootstrap';
 
 // Contact form
 function Contact() {
-    // State variables for each field in the form
-    const [name, setName] = useState('');
-    const [message, setMessage] = useState('');
-    const [email, setEmail] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
-    const [show, setShow] = useState(false);
+    // OLD CONTACT FORM CODE 
 
-    // Relevant elements
-    var error = document.getElementById("errorField");
-    var emailField = document.getElementById("formEmail")
+    // // State variables for each field in the form
+    // const [name, setName] = useState('');
+    // const [message, setMessage] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [errorMessage, setErrorMessage] = useState('');
+    // const [show, setShow] = useState(false);
 
-    // Validates the email
-    function checkEmail(e) {
-        if (!(validator.isEmail(email))) {
-            // There is only one error message, so I set it
-            setErrorMessage("A valid email address is required");
-            setShow(true);
-        } else {
-            setShow(false);
-            error.textContent = "";
-            emailField.style.border = "none"
-        }
-    }
+    // // Relevant elements
+    // var error = document.getElementById("errorField");
+    // var emailField = document.getElementById("formEmail")
 
-    // This if statement just handles error message display for email field
-    if (show) {
-        error.textContent = errorMessage
-        error.style.color = "red"
-        emailField.style.border = "thick solid red"
-    }
+    // // Validates the email
+    // function checkEmail(e) {
+    //     if (!(validator.isEmail(email))) {
+    //         // There is only one error message, so I set it
+    //         setErrorMessage("A valid email address is required");
+    //         setShow(true);
+    //     } else {
+    //         setShow(false);
+    //         error.textContent = "";
+    //         emailField.style.border = "none"
+    //     }
+    // }
 
-    function setInput(e) {
-        const { target } = e;
-        const inputType = target.name;
-        const inputValue = target.value;
+    // // This if statement just handles error message display for email field
+    // if (show) {
+    //     error.textContent = errorMessage
+    //     error.style.color = "red"
+    //     emailField.style.border = "thick solid red"
+    // }
 
-        // Based on the input type, we set the state of either email, username, and password
-        if (inputType === 'email') {
-            setEmail(inputValue);
-        } else if (inputType === 'name') {
-            setName(inputValue);
-        } else if (inputType === 'message') {
-            setMessage(inputValue);
-        }
-    }
+    // function setInput(e) {
+    //     const { target } = e;
+    //     const inputType = target.name;
+    //     const inputValue = target.value;
 
-    // All this does for now is just make the fields empty
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
+    //     // Based on the input type, we set the state of either email, username, and password
+    //     if (inputType === 'email') {
+    //         setEmail(inputValue);
+    //     } else if (inputType === 'name') {
+    //         setName(inputValue);
+    //     } else if (inputType === 'message') {
+    //         setMessage(inputValue);
+    //     }
+    // }
 
-        // Make sure all the fields are valid
-        if (!(validator.isEmail(email))) {
-            alert("Invalid email address")
-        } 
-        
-        // If all is well, ... Clear the fields (because I don't know how to submit a message directly)
-        else {
-            setName('');
-            setMessage('');
-            setEmail('');
-        }
-    };
+    // // All this does for now is just make the fields empty
+    // const handleFormSubmit = (e) => {
+    //     e.preventDefault();
+
+    //     // Make sure all the fields are valid
+    //     if (!(validator.isEmail(email))) {
+    //         alert("Invalid email address")
+    //     }
+
+    //     // If all is well, ... Clear the fields (because I don't know how to submit a message directly)
+    //     else {
+    //         setName('');
+    //         setMessage('');
+    //         setEmail('');
+    //     }
+    // };
 
     return (
         <Container className="contact content">
             <h1 className="mt-3">Contact Me</h1>
-            <p className="lead">You will be able to use this form to send me a message at some point</p>
+            <p className="lead">Listed are some ways to contact me:</p>
+            <h3 className="mt-5">Phone</h3>
+            <p className="fs-5">(804) 709-5953</p>
+            <h3 className="mt-5">Email</h3>
+            <a href="mailto:elbincenisev@outlook.com" className="fs-5">elbincenisev@outlook.com</a>
 
-            <Row className="justify-content-center">
-
-                {/* OLD CONTACT FORM
+            {/* OLD CONTACT FORM CODE
 
                 <Form className="text-center" style={{ width: '80%' }}>
 
@@ -121,9 +123,6 @@ function Contact() {
                         Submit
                     </Button>
                 </Form> */}
-
-                
-            </Row>
         </Container>
     );
 }
