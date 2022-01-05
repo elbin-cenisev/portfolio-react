@@ -74,6 +74,9 @@ function Contact() {
             <p className="lead">You will be able to use this form to send me a message at some point</p>
 
             <Row className="justify-content-center">
+
+                {/* OLD CONTACT FORM
+
                 <Form className="text-center" style={{ width: '80%' }}>
 
                     <Form.Group className="mb-3" controlId="formName">
@@ -117,7 +120,9 @@ function Contact() {
                     <Button variant="primary" onClick={handleFormSubmit}>
                         Submit
                     </Button>
-                </Form>
+                </Form> */}
+
+                
             </Row>
         </Container>
     );
