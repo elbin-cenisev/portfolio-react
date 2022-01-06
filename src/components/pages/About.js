@@ -36,9 +36,9 @@ function About() {
                 <ListGroup.Item variant="primary">Writing HTML code</ListGroup.Item>
                 <ListGroup.Item variant="primary">Writing custom CSS code</ListGroup.Item>
                 <ListGroup.Item variant="primary">Writing both frontend and backend JavaScript code to create dynamic web applications</ListGroup.Item>
-                <ListGroup.Item variant="primary">Using existing HTML, CSS and JS libraries such as Bootstrap and Semantic UI</ListGroup.Item>
+                <ListGroup.Item variant="primary">Using existing HTML, CSS and JavaScript libraries such as Bootstrap, React and Redux </ListGroup.Item>
                 <ListGroup.Item variant="primary">Using third-party APIs</ListGroup.Item>
-                <ListGroup.Item variant="primary">Managing data using SQL (MySQL) and NoSQL (MongoDB) with Node.JS</ListGroup.Item>
+                <ListGroup.Item variant="primary">Managing data using SQL (MySQL) and NoSQL (MongoDB)</ListGroup.Item>
                 <ListGroup.Item variant="primary">Using GitHub Pages and Heroku to deploy my web applications</ListGroup.Item>
                 <ListGroup.Item variant="primary">Managing and updating GitHub repositories</ListGroup.Item>
             </ListGroup>
